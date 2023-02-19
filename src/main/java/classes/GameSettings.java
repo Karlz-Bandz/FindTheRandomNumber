@@ -50,5 +50,62 @@ public class GameSettings implements Settings {
         return 0;
     }
 
+    @Override
+    public boolean tryFindTheNumber(int randNumber, int number) {
+        if(number > randNumber){
+            System.out.println("Your number is greater than the random number");
+            return false;
+        }else if(number < randNumber){
+            System.out.println("Your number is smaller than the random number");
+            return false;
+        }else if(number == randNumber){
+            System.out.println("You won!!!");
+            return true;
+        }else
+            return false;
+    }
 
+    @Override
+    public void playTheGame() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hello, welcome to the game FindTheRandomNumber///////////////");
+
+       // GameSettings settings = new GameSettings();
+
+        int level = this.returnTheLevel();
+        String gameInterval = "";
+
+        if(level == 1){
+            gameInterval = "from 0 to 10";
+            System.out.println("You chose easy level. You have to find the number" +
+                    " from 0 to 10");
+        }else if(level == 2){
+            gameInterval = "from 0 to 40";
+            System.out.println("You chose medium level. You have to find the number" +
+                    " from 0 to 40");
+        }
+        else if(level == 3){
+            gameInterval = "from 0 to 100";
+            System.out.println("You chose hard level. You have to find the number" +
+                    " from 0 to 100");
+        }
+
+        int randNumber = this.createTheRandomNumber(level);
+        int turnCounter = 0;
+        boolean gameStatus = false;
+
+
+        while(!gameStatus){
+            System.out.println("Please provide the number " + gameInterval);
+            int x = scanner.nextInt();
+            turnCounter++;
+            gameStatus = this.tryFindTheNumber(randNumber, x);
+        }
+
+        System.out.println("Congratulations you won in " + turnCounter + " turns");
+        System.out.println("Please enter any key to exit...");
+        scanner.nextLine();
+        scanner.nextLine();
+    }
 }

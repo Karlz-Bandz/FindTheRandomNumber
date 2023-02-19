@@ -55,9 +55,6 @@ public class GameSettingsTests {
         }else
             System.out.println("Third failed");
 
-
-
-
     }
 
 
