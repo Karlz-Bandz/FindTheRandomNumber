@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GameSettingsTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-19T10:40:10" hostname="WPLKM250542-F0V" time="0.032">
+<testsuite name="GameSettingsTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-19T10:58:11" hostname="WPLKM250542-F0V" time="0.042">
   <properties/>
-  <testcase name="ReturnTheLevel_Test()" classname="GameSettingsTests" time="0.032"/>
+  <testcase name="ReturnTheLevel_Test()" classname="GameSettingsTests" time="0.039"/>
+  <testcase name="CreateTheRandomNumber_Test()" classname="GameSettingsTests" time="0.002"/>
   <system-out><![CDATA[Please choose the level:                     ///////////////
 1.Easy     2.Medium     3.Hard               ///////////////
+7
+First passed
+3
+Second passed
+40
+Third passed
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

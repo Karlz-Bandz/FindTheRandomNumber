@@ -2,6 +2,7 @@ package classes;
 
 import interfaces.Settings;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class GameSettings implements Settings {
@@ -32,6 +33,21 @@ public class GameSettings implements Settings {
             }
         }
         return level;
+    }
+
+    @Override
+    public int createTheRandomNumber(int number) {
+
+        Random rand = new Random();
+
+        if(number == 1){
+            return rand.nextInt(11);
+        }else if(number == 2){
+            return rand.nextInt(41);
+        }else if(number == 3){
+            return rand.nextInt(101);
+        }
+        return 0;
     }
 
 
