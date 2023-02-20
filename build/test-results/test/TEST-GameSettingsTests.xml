@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GameSettingsTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-19T10:58:11" hostname="WPLKM250542-F0V" time="0.042">
+<testsuite name="GameSettingsTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-02-20T07:24:40" hostname="WPLKM250542-F0V" time="0.044">
   <properties/>
-  <testcase name="ReturnTheLevel_Test()" classname="GameSettingsTests" time="0.039"/>
-  <testcase name="CreateTheRandomNumber_Test()" classname="GameSettingsTests" time="0.002"/>
+  <testcase name="ReturnTheLevel_Test()" classname="GameSettingsTests" time="0.031"/>
+  <testcase name="TryFindTheNumber_Test()" classname="GameSettingsTests" time="0.008"/>
+  <testcase name="CreateTheRandomNumber_Test()" classname="GameSettingsTests" time="0.003"/>
   <system-out><![CDATA[Please choose the level:                     ///////////////
 1.Easy     2.Medium     3.Hard               ///////////////
-7
-First passed
+You won!!!
+Your number is greater than the random number
 3
+First passed
+36
 Second passed
-40
+963
 Third passed
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
