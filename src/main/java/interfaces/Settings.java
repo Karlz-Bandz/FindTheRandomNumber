@@ -9,4 +9,5 @@ public interface Settings {
     boolean tryFindTheNumber(int randNumber, int number);
 
     void playTheGame();
+
 }

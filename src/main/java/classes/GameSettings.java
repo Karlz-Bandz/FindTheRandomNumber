@@ -45,7 +45,7 @@ public class GameSettings implements Settings {
         }else if(number == 2){
             return rand.nextInt(41);
         }else if(number == 3){
-            return rand.nextInt(101);
+            return rand.nextInt(1001);
         }
         return 0;
     }
@@ -86,7 +86,7 @@ public class GameSettings implements Settings {
                     " from 0 to 40");
         }
         else if(level == 3){
-            gameInterval = "from 0 to 100";
+            gameInterval = "from 0 to 1000";
             System.out.println("You chose hard level. You have to find the number" +
                     " from 0 to 100");
         }
@@ -98,9 +98,15 @@ public class GameSettings implements Settings {
 
         while(!gameStatus){
             System.out.println("Please provide the number " + gameInterval);
-            int x = scanner.nextInt();
-            turnCounter++;
-            gameStatus = this.tryFindTheNumber(randNumber, x);
+            int x = 0;
+            try{
+                x = scanner.nextInt();
+                turnCounter++;
+                gameStatus = this.tryFindTheNumber(randNumber, x);
+            }catch (Exception e){
+                System.out.println("Invalid input!");
+                scanner.nextLine();
+            }
         }
 
         System.out.println("Congratulations you won in " + turnCounter + " turns");

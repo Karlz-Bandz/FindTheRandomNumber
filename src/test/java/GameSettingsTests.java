@@ -8,10 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class GameSettingsTests {
 
 
-
-
-
-
     @Test
     public void ReturnTheLevel_Test(){
 
@@ -49,12 +45,24 @@ public class GameSettingsTests {
 
         //Third level
         int thirdTest = testObject.createTheRandomNumber(3);
-        if(thirdTest >= 0 && thirdTest <=100){
+        if(thirdTest >= 0 && thirdTest <=1000){
             System.out.println(thirdTest);
             System.out.println("Third passed");
         }else
             System.out.println("Third failed");
 
+    }
+
+    @Test
+    public void TryFindTheNumber_Test(){
+
+        GameSettings gameSettings = new GameSettings();
+
+        boolean passedTest = gameSettings.tryFindTheNumber(1,1);
+        boolean failedTest = gameSettings.tryFindTheNumber(1,55);
+
+        assertEquals(passedTest, true);
+        assertEquals(failedTest, false);
     }
 
 
