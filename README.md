@@ -13,7 +13,7 @@ When you provide a wrong number you'll be informed
 if this number is smaller or maybe greater than the random 
 number.
 
-At the end of the game when you finnaly find the right number 
+At the end of the game when you finally find the right number 
 you're getting an information that you won! and how many turns 
 the game took you
 
