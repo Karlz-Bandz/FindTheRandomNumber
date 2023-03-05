@@ -78,17 +78,14 @@ public class GameSettings implements Settings {
 
         if(level == 1){
             gameInterval = "from 0 to 10";
-            System.out.println("You chose easy level. You have to find the number" +
-                    " from 0 to 10");
+            System.out.println("You chose easy level. You have to find the number" + gameInterval);
         }else if(level == 2){
             gameInterval = "from 0 to 40";
-            System.out.println("You chose medium level. You have to find the number" +
-                    " from 0 to 40");
+            System.out.println("You chose medium level. You have to find the number" + gameInterval);
         }
         else if(level == 3){
             gameInterval = "from 0 to 1000";
-            System.out.println("You chose hard level. You have to find the number" +
-                    " from 0 to 100");
+            System.out.println("You chose hard level. You have to find the number" + gameInterval);
         }
 
         int randNumber = this.createTheRandomNumber(level);
